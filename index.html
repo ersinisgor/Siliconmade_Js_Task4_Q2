@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sayısal Loto Oyunu</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/e9020a7b47.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="gameScreen">
+      <h1>Sayısal Loto Oyunu</h1>
+      <p>Aşağıdaki inputlara tahminlerinizi giriniz.</p>
+
+      <form id="guessForm">
+        <input type="number" name="number" min="1" max="49" />
+        <input type="number" name="number" min="1" max="49" />
+        <input type="number" name="number" min="1" max="49" />
+        <input type="number" name="number" min="1" max="49" />
+        <input type="number" name="number" min="1" max="49" />
+        <input type="number" name="number" min="1" max="49" />
+        <button type="button" id="guessButton" onclick="handleGuess()">
+          Tahmin Gir
+        </button>
+      </form>
+
+      <br />
+      <p id="text"></p>
+      <hr />
+      <button disabled id="drawButton" onclick="drawLottery()">
+        Kurayı Çek
+      </button>
+      <p>Loto Sayıları</p>
+
+      <form id="lotteryForm">
+        <input type="number" id="lotto1" class="results" disabled />
+        <input type="number" id="lotto2" class="results" disabled />
+        <input type="number" id="lotto3" class="results" disabled />
+        <input type="number" id="lotto4" class="results" disabled />
+        <input type="number" id="lotto5" class="results" disabled />
+        <input type="number" id="lotto6" class="results" disabled />
+      </form>
+
+      <p id="matchedNumbers"></p>
+      <p id="matchCount"></p>
+      <button class="newGuess" onclick="resetGame()">Yeni Tahmin</button>
+    </div>
+
+    <footer>
+      <p>
+        Copyright © 2024 Created by
+        <a href="https://ersinisgor.netlify.app/" target="_blank"
+          ><b><i>ersinisgor </i></b></a
+        >
+      </p>
+      <a href="https://github.com/ersinisgor" target="_blank">
+        <i class="fab fa-github"></i
+      ></a>
+    </footer>
+    <script src="lottery.js"></script>
+  </body>
+</html>

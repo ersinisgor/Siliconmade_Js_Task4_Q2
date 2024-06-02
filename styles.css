@@ -1,0 +1,137 @@
+/* styles.css */
+
+body {
+  background: linear-gradient(135deg, #ff0000, #0000ff);
+  color: #fff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gameScreen {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 47rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input[type="number"] {
+  width: 4rem;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #777;
+  cursor: auto;
+}
+
+button:hover:not(:disabled) {
+  background-color: #e64a19;
+}
+
+hr {
+  border: 1px solid #fff;
+  margin: 20px 0;
+  width: 100%;
+}
+
+p {
+  margin: 10px 0;
+}
+
+#text {
+  font-weight: bold;
+}
+
+.results {
+  color: #fcbf49;
+}
+
+#matchedNumbers,
+#matchCount {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.newGuess {
+  background-color: #0077b6;
+}
+
+.newGuess:hover {
+  background-color: #023e8a !important;
+}
+
+/*----FOOTER----*/
+a {
+  text-decoration: none;
+  color: #adb5bd;
+}
+
+footer {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  color: #adb5bd;
+  font-size: 0.9rem;
+  margin-top: auto; /* Footer'u sayfanın en altına sabitle */
+  padding: 1rem 0;
+}
+
+.fa-github {
+  color: #adb5bd;
+  font-size: 1.25rem;
+}
+
+.fa-github:hover {
+  animation: github-animation 0.5s ease infinite alternate;
+}
+
+@keyframes github-animation {
+  from {
+    transform: translateY(0rem) scale(1.2);
+  }
+  to {
+    transform: translateY(-0.3rem) scale(1.2);
+  }
+}
